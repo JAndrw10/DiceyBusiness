@@ -39,31 +39,24 @@ generateDieBtn.addEventListener("click", function () {
 
 });
 
-// function roll() {
-//     this.value = Math.floor((Math.random() * 6) + 1);
-//     this.div.textContent = this.value;
-// }
 
 
-
-
-//lost.......
-rerollDieBtn.addEventListener("click", function () {
+rerollDieBtn.addEventListener('click', () => {
     for( let i = 0; i < dieArray.length; i++){
         dieArray[i].roll();
     }
-
-    
-
 });
 
 
 
-sumDieBtn.addEventListener("click", function () {
+sumDieBtn.addEventListener('click', () => {
+    let sum  = 0;
+    for(let i = 0; i < dieArray.length; i++){
+        sum += dieArray[i].value
+    }
+    alert(`The sum is ${sum}.`);
 
-    alert(" you clicked the Sum die button");
-
-});
+})
 
 
 
